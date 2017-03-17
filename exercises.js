@@ -262,6 +262,7 @@ console.log(printObj(sumObj));
 console.log(printObj(sumObj2));
 console.log(sumObj,sumObj2);
 
+
 /*
    Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
@@ -272,7 +273,18 @@ console.log(sumObj,sumObj2);
         plainBoxResult and use `console.log` to inspect your results.
  */
 
+function putInPlainBox(object) {
+  for( var i = 0; i < 10; i++) {
+    object.contents.push(Math.floor(Math.random() * 10));
+  }
+  console.log(object.contents);
+}
 
+putInPlainBox(plainBox);
+
+function getRandInt(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
 /*
    Detecting transmission
         Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 

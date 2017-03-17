@@ -18,6 +18,16 @@ A literal object.
  "My dog `name` is `age` year old likes to `speak`."
  */ 
 
+var dog = {
+  name : "pyon",
+  age : 21,
+  vegeterian : false,
+  color : ["black","brown"],
+  speak : function() {
+    return "woof!";
+  }
+}
+console.log("my dog " + dog.name + " is " + dog.age + " years old and likes to " + dog.speak());
 
 /*
 An empty object
@@ -32,7 +42,17 @@ An empty object
   Console.log the object.
 */
 
+var kicks = {}
+console.log(kicks);
+kicks.brand = "adidas";
+kicks["color"] = "red";
+kicks.size = 8.5;
+kicks.buy = function() {
+  return "hell yeah!";
+}
+console.log(kicks.buy());
 
+console.log(kicks);
 /* 
    Declare a variable named `plainBox` and set its value to be an EMPTY object.
    Next, you will add three properties to this object. 

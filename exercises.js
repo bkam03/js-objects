@@ -61,6 +61,15 @@ console.log(kicks);
             - add a property named `contents` and set it to be an empty array.
 */
 
+function box() {
+}
+var plainBox = new box();
+
+plainBox.color = "blue";
+plainBox.size = 11;
+plainBox.contents = [];
+
+console.log(box,plainBox);
 
 /*
    Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:

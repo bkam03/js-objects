@@ -79,7 +79,17 @@ console.log(box,plainBox);
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
 */
+function car(model,year,automaticTransmission,driver,passengers) {
+  this.model = model;
+  this.year = year;
+  this.automaticTransmission = automaticTransmission;
+  this.driver = driver;
+  this.passengers = passengers;
+}
 
+stockCar = new car("Ford",2002,true,null,[]);
+
+console.log(car,stockCar);
 
 /*
    Add new property inside a function
@@ -96,8 +106,17 @@ console.log(box,plainBox);
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+var plainPerson = {}
 
+function buildPerson(person, nameString,age) {
+  person.name = nameString;
+  person["age"] = age;
+  return person;
+}
+console.log("plainPerson",plainPerson);
 
+var completePerson = buildPerson(plainPerson, "bob", 43);
+console.log(completePerson,completePerson.name,completePerson.age);
 /*
    Display values of objects that are inside an array
    Declare a new variable named `arrayOfObjects` and set it to be [this array of objects

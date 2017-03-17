@@ -283,7 +283,7 @@ function putInPlainBox(object) {
 putInPlainBox(plainBox);
 
 function getRandInt(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min))+min;
 }
 /*
    Detecting transmission
@@ -296,6 +296,15 @@ function getRandInt(min, max) {
         Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+function detectingTransmission(object){
+  if(object.automaticTransmission === true) {
+    return "automatic trans";
+  }else {
+    return "manual trans";
+  }
+}
+console.log(stockCar);
+console.log(detectingTransmission(stockCar));
 
 /*
    Who's driving this thing?!
@@ -309,6 +318,12 @@ function getRandInt(min, max) {
         your results. Consider using `plainPerson` as your driver.
  */
 
+function addDriver(object, person) {
+  object.driver = person;
+}
+console.log(stockCar);
+addDriver(stockCar,plainPerson)
+console.log(stockCar);
 
 /*
     #Final Boss

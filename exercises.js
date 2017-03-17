@@ -230,6 +230,13 @@ function objectAddition(object) {
 sumObjResult = objectAddition(sumObj);
 console.log(sumObj,sumObjResult);
 
+function numObj(a,b) {
+  this.a = a;
+  this.b = b;
+  this.result = a+b;
+}
+
+var sumObj2 = new numObj(5,2);
 /*
    Print sum function and add as new key-value
    Declare a new function named printObj and a single parameter which will be the object from the challenge just above. 
@@ -247,6 +254,13 @@ console.log(sumObj,sumObjResult);
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj(object) {
+  object.output = object.a + " + " + object.b + " = " + object.result;
+  return object.output;
+}
+console.log(printObj(sumObj));
+console.log(printObj(sumObj2));
+console.log(sumObj,sumObj2);
 
 /*
    Putting stuff in `plainBox`
